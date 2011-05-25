@@ -3,14 +3,16 @@ name 'Chart-Timecard';
 all_from 'lib/Chart/Timecard.pm';
 
 requires
-    'Object::Tiny' => "1.06";
+    'DateTime'     => 0.70,
+    'Object::Tiny' => 1.08;
+
+build_requires
+    'Test::Cukes' => '0.10',
+    'Test::More'  => '0.98';
 
 tests 't/*.t';
 author_tests 'xt';
 
-build_requires
-    'Test::More' => "0.86",
-    "Test::Cukes" => "0.05";
-
 auto_include;
+auto_set_repository;
 WriteAll;
